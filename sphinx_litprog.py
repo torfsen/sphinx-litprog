@@ -6,7 +6,7 @@ import os.path
 import os
 
 from docutils import nodes
-from docutils.parsers.rst import Directive
+from docutils.parsers.rst import Directive, directives
 
 from sphinx.directives.code import CodeBlock
 
@@ -27,6 +27,9 @@ class LitProg(CodeBlock):
     # In old Sphinx versions, the CodeBlock directive has a required argument
     required_arguments = 0
 
+    option_spec = dict(CodeBlock.option_spec)
+    option_spec['hidden'] = directives.flag
+
     def run(self):
         env = self.state.document.settings.env
         doc_snippets = _get_snippets(env).setdefault(env.docname, [])
@@ -35,6 +38,10 @@ class LitProg(CodeBlock):
         # Provide fake argument so that CodeBlock is happy in old
         # versions of Sphinx
         self.arguments = ['python']
+
+        if 'hidden' in self.options:
+            # Don't produce output in the documentation
+            return []
 
         return super(LitProg, self).run()
 
