@@ -1,5 +1,5 @@
 '''
-Literal programming extension for Sphinx.
+A literate programming extension for Sphinx.
 '''
 
 import os.path
@@ -22,7 +22,7 @@ def _get_snippets(env):
 
 class LitProg(CodeBlock):
     '''
-    Literal programming directive.
+    Literate programming directive.
     '''
     # In old Sphinx versions, the CodeBlock directive has a required argument
     required_arguments = 0
@@ -60,7 +60,7 @@ def _write_output(app, exception):
     snippets = _get_snippets(env)
 
     filename = os.path.join(app.outdir, config.litprog_filename)
-    print('Writing literal programming code to {}'.format(os.path.relpath(filename)))
+    print('Writing literate programming code to {}'.format(os.path.relpath(filename)))
 
     with open(filename, 'w', encoding='utf-8') as f:
 
