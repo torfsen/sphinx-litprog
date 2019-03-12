@@ -20,10 +20,17 @@ with open(SOURCE_FILE, 'r', encoding='utf-8') as f:
 if not version:
     raise RuntimeError('Could not extract version from "{}".'.format(SOURCE_FILE))
 
+
+# Load long description from README.md
+README = os.path.join(HERE, 'README.md')
+with open(README, 'r', encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name='sphinx-litprog',
     description='A literate programming extension for Sphinx',
-    long_description='A literate programming extension for Sphinx',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/torfsen/sphinx-litprog',
     version=version,
     license='MIT',
