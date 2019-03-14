@@ -62,7 +62,7 @@ The ``litprog`` directive supports the same arguments and options as the `code-b
 
 Development
 ===========
-*sphinx-litprog* is `developed on GitHub <https://github.com/torfsen/sphinx-litprog>`_.
+*sphinx-litprog* itself is `developed using literal programming <The Extension_>`_. Version control and issue management happens `on GitHub <https://github.com/torfsen/sphinx-litprog>`_.
 
 
 The Extension
