@@ -1,4 +1,4 @@
-all: litprog html
+sphinx: litprog html
 
 html:
 	sphinx-build -b html . _build/
