@@ -16,7 +16,7 @@ pypi: _confirm
 	rm -rf dist
 	rm -rf *.egg-info
 	./setup.py sdist
-	twine upload --repository-url https://pypi.org/legacy/ dist/*
+	twine upload dist/*
 
 # See https://stackoverflow.com/a/47839479/857390
 _confirm:
