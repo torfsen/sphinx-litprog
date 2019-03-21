@@ -239,7 +239,8 @@ We use a generator function to provide the document names in the correct order:
         while stack:
             docname = stack.pop()
             yield docname
-            stack.extend(includes.get(docname, []))
+            children = includes.get(docname, [])
+            stack.extend(reversed(children))
 
 
 Sphinx Integration

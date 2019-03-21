@@ -85,7 +85,8 @@ def _docnames_in_toc_order(env):
     while stack:
         docname = stack.pop()
         yield docname
-        stack.extend(includes.get(docname, []))
+        children = includes.get(docname, [])
+        stack.extend(reversed(children))
 def setup(app):
     app.add_builder(LitProgBuilder)
     app.add_directive('litprog', LitProgDirective)
