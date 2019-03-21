@@ -1,6 +1,7 @@
 /_build/
 /build/
 /dist/
+/tests/test-project/_build/
 /venv/
 
 *.egg-info/

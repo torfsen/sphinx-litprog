@@ -1,18 +1,18 @@
 sphinx: litprog html
 
 html:
-	sphinx-build -b html . _build/
+	sphinx-build -b html -E . _build/
 
 litprog:
-	sphinx-build -b litprog . _build/
+	sphinx-build -b litprog -E . _build/
 
-testpypi: _confirm
+testpypi: sphinx test _confirm
 	rm -rf dist
 	rm -rf *.egg-info
 	./setup.py sdist
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
-pypi: _confirm
+pypi: sphinx test _confirm
 	rm -rf dist
 	rm -rf *.egg-info
 	./setup.py sdist
@@ -22,4 +22,7 @@ pypi: _confirm
 _confirm:
 	@(read -p "Are you sure? [y/N]: " sure && \
 	  case "$$sure" in [yY]) true;; *) false;; esac )
+
+test:
+	pytest
 
