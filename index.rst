@@ -60,6 +60,11 @@ Code from multiple ``litprog`` directives in the same document is exported in th
 The ``litprog`` directive supports the same arguments and options as the `code-block directive <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-code-block>`_. In addition, the ``:hidden:`` flag hides the content in the normal documentation output (but not in the exported source code).
 
 
+Change Log
+==========
+Please refer to the file `CHANGELOG.md <https://github.com/torfsen/sphinx-litprog/blob/master/CHANGELOG.md>`_.
+
+
 Development
 ===========
 *sphinx-litprog* itself is `developed using literal programming <The Extension_>`_. Version control and issue management happens `on GitHub <https://github.com/torfsen/sphinx-litprog>`_.
