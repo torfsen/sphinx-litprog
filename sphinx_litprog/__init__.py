@@ -6,7 +6,7 @@ import os.path
 from docutils.parsers.rst import directives
 from sphinx.builders import Builder
 from sphinx.directives.code import CodeBlock
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 class LitProgDirective(CodeBlock):
     '''
     Literate programming directive.

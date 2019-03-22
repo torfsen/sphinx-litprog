@@ -113,13 +113,14 @@ Next, in accordance with PEP8_, we have the imports. We need
     from sphinx.builders import Builder
     from sphinx.directives.code import CodeBlock
 
-We define the version of our module, using `Semantic Versioning`_:
+We define the version of our module, using `Semantic Versioning`_ (see the `change log`_ for a history of changes):
 
 .. _Semantic Versioning: https://semver.org/
+.. _change log: https://github.com/torfsen/sphinx-litprog/blob/master/CHANGELOG.md
 
 .. litprog::
 
-    __version__ = '0.1.0'
+    __version__ = '0.1.1'
 
 
 The ``litprog`` Directive
