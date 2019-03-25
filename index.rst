@@ -76,7 +76,7 @@ As an example, here is the source code of the *sphinx-litprog* extension itself 
 
 The source code you see on this page is *not* copied from the ``sphinx_litprog`` Python module --- the module is instead generated from the code on this page! That is, the *sphinx-litprog* extension is itself developed using literate programming.
 
-For more details, take a look at the `source code of this documentation page <_sources/index.rst.txt>`_ and at the `automatically generated module code <https://github.com/torfsen/sphinx-litprog/blob/master/sphinx_litprog/__index__.py>`_.
+For more details, take a look at the `source code of this documentation page <_sources/index.rst.txt>`_ and at the `automatically generated module code <https://github.com/torfsen/sphinx-litprog/blob/master/sphinx_litprog/__init__.py>`_.
 
 
 Module Header
